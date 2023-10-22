@@ -4,15 +4,18 @@
 #include <iostream>
 #include <map>
 #include <string>
+using namespace std; 
 
 class Phonebook {
 private:
-    std::string name, number;
-    std::map<std::string, std::string> entries;
+    string name, number;
+    map<string, string> entries;
     void saveToFile();
 
 public:
-    void addContact(const std::string &inputName);
+    void addContact(const string &inputName);
+    bool searchByName(const string &searchName) const;
+    bool searchByNumber(const string &searchNumber) const;
 };
 
 #endif  
